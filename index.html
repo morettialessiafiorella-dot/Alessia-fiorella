@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alessia Fiorella Moretti | Book Marketing Specialist for Authors</title>
+<meta name="description" content="Book marketing specialist helping authors find readers and sell more books. Launches, backlist revival, positioning and press outreach, all handled by email.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+:root{--ink:#0E1330;--navy:#172052;--gold:#D4A84B;--gold2:#F0D58C;--paper:#F4F6FB;--mute:#5A6080;--line:#DDE1EE}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font:17px/1.65 "Manrope",system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.08;margin:0 0 .5em}
+h1{font-size:clamp(2.8rem,7vw,5.2rem)}
+h2{font-size:clamp(2.1rem,4.5vw,3.3rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 1em}
+.w{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:96px 0;position:relative}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);font-weight:800;text-decoration:none;padding:16px 28px;border:0;border-radius:4px;cursor:pointer;font-size:1rem;font-family:inherit;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(212,168,75,.4);background:var(--gold2)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.dark{background:var(--ink);color:#fff}
+.dark .mute{color:#B6BBD8}
+.mute{color:var(--mute)}
+.kick{font-weight:800;color:var(--gold);letter-spacing:.04em;margin-bottom:.8em}
+/* preloader */
+#pre{position:fixed;inset:0;background:var(--ink);z-index:99;display:grid;place-items:center;text-align:center;color:#fff;animation:out .7s 2s forwards}
+#pre b{font:700 clamp(1.6rem,5vw,2.6rem) "Cormorant Garamond",Georgia,serif;display:block;animation:rise .9s both}
+#pre i{display:block;height:3px;background:var(--gold);margin:18px auto 0;width:0;animation:bar 1.6s .2s forwards}
+#pre span{color:var(--gold);font-size:.9rem;display:block;margin-top:12px}
+@keyframes bar{to{width:min(260px,70vw)}}
+@keyframes out{to{opacity:0;visibility:hidden}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:60}
+/* top + nav */
+.top{background:#090C22;color:#E8EAF6;font-size:.9rem;text-align:center;padding:8px 14px}
+.top a{color:var(--gold2);font-weight:800}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(14,19,48,.92);backdrop-filter:blur(10px);color:#fff}
+.nav .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:700 1.4rem "Cormorant Garamond",Georgia,serif;text-decoration:none}
+.nav nav a{margin-left:22px;text-decoration:none;font-weight:600;font-size:.95rem;position:relative}
+.nav nav a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:width .3s}
+.nav nav a:hover::after{width:100%}
+#mb{display:none;background:none;border:2px solid #fff;color:#fff;border-radius:4px;padding:6px 12px;font-weight:800;cursor:pointer}
+/* hero */
+.hero{background:radial-gradient(900px 500px at 85% 10%,#2B3A8C 0,transparent 60%),radial-gradient(700px 400px at 0 100%,#4A2A6E 0,transparent 60%),var(--ink);color:#fff;padding:72px 0 96px;overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.hero .in>*{opacity:0;animation:rise .9s forwards}
+.hero .in>*:nth-child(1){animation-delay:2.1s}.hero .in>*:nth-child(2){animation-delay:2.3s}.hero .in>*:nth-child(3){animation-delay:2.5s}.hero .in>*:nth-child(4){animation-delay:2.7s}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p.lead{font-size:1.2rem;max-width:54ch;color:#D5D8EE}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin:26px 0 14px}
+.portrait{position:relative;animation:float 6s ease-in-out infinite}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 14px 14px;border:3px solid var(--gold);box-shadow:0 30px 60px rgba(0,0,0,.45);background:var(--navy)}
+.portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid rgba(212,168,75,.5);border-radius:220px 220px 14px 14px;z-index:-1}
+.badge{position:absolute;left:-14px;bottom:28px;background:#fff;color:var(--ink);padding:12px 16px;border-radius:6px;font-weight:800;font-size:.9rem;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+@keyframes float{50%{transform:translateY(-12px)}}
+/* trust */
+.trust{background:#fff;padding:34px 0;border-bottom:1px solid var(--line)}
+.trust .w{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust div{font-weight:700;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.trust svg{flex:none;width:24px;height:24px;fill:none;stroke:var(--gold);stroke-width:3}
+/* generic grids */
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(14,19,48,.12)}
+.card ul{margin:0;padding-left:1.1em}
+.card li{margin-bottom:.4em}
+.card small{display:block;color:var(--mute);margin-bottom:12px}
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.steps div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:22px}
+.steps div::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:800;margin-bottom:12px}
+.steps b{display:block;margin-bottom:6px;font-size:1.05rem}
+.list{max-width:760px;counter-reset:l;padding:0;list-style:none}
+.list li{counter-increment:l;padding:0 0 22px 64px;position:relative;border-left:2px solid var(--line);margin-left:19px}
+.list li::before{content:counter(l);position:absolute;left:-20px;top:0;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-weight:800}
+.list b{display:block}
+/* featured authors */
+.tg{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.tc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden}
+.tc::before{content:"";position:absolute;inset:0 0 auto;height:6px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.ph{width:112px;height:112px;border-radius:50%;overflow:hidden;border:4px solid var(--gold);display:block;background:var(--navy);transition:transform .3s}
+.ph:hover{transform:scale(1.08)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.bk{width:150px;height:150px;margin:20px 0 6px;display:block;perspective:700px}
+.bk img{width:100%;height:100%;object-fit:cover;border-radius:4px;box-shadow:0 14px 28px rgba(14,19,48,.3);transition:transform .15s;background:var(--navy)}
+blockquote{margin:14px 0;font:italic 500 1.25rem/1.45 "Cormorant Garamond",Georgia,serif}
+.tc h3{margin:0}
+.tc p.t{color:var(--mute);margin:2px 0 14px}
+.amz{display:inline-flex;align-items:center;margin-top:auto;padding:10px 18px;border:1px solid var(--line);border-radius:6px;background:#fff;transition:box-shadow .3s,transform .3s}
+.amz:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.amz svg{height:30px;width:auto}
+/* about */
+.about .w{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:6px solid var(--gold);box-shadow:0 24px 50px rgba(0,0,0,.4);background:var(--navy)}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:12px;padding:0 22px;max-width:820px}
+summary{cursor:pointer;font-weight:800;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--mute)}
+/* contact */
+.contact .w{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.cp{display:flex;align-items:center;gap:16px;margin:22px 0}
+.cp img{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);background:var(--navy)}
+.mail{display:inline-block;font-weight:800;font-size:1.15rem;color:var(--gold2);word-break:break-all}
+form{background:#fff;color:var(--ink);padding:30px;border-radius:10px;display:grid;gap:16px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+label{font-weight:700;display:grid;gap:6px;font-size:.95rem}
+input,select,textarea{font:inherit;padding:13px;border:1px solid var(--line);border-radius:6px;width:100%;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:2px solid var(--gold)}
+.hp{position:absolute;left:-9999px}
+#msg{min-height:1.6em;font-weight:700;margin:0}
+.ok{color:#0C7A3E}.err{color:#B3261E}
+footer{background:#090C22;color:#B6BBD8;padding:56px 0 30px}
+footer .w{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer a{display:block;text-decoration:none;margin-bottom:8px}
+footer a:hover{color:var(--gold2)}
+footer h4{color:#fff;margin:0 0 12px}
+.copy{border-top:1px solid #232850;margin-top:32px;padding-top:20px;font-size:.9rem}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s}
+.js .rv.on{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero .w,.about .w,.contact .w,footer .w{grid-template-columns:1fr}
+ .trust .w{grid-template-columns:1fr 1fr}
+ .portrait{max-width:340px;margin:0 auto}
+ #mb{display:block}
+ .nav nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--ink);padding:10px 22px 20px}
+ .nav nav.open{display:block}
+ .nav nav a{display:block;margin:0;padding:12px 0}
+ section{padding:70px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-delay:0s!important;transition:none!important}html{scroll-behavior:auto}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="pre" aria-hidden="true"><div><b>Alessia Fiorella Moretti</b><i></i><span>Book Marketing Specialist</span></div></div>
+<div id="bar"></div>
+<div class="top">Authors, write to me at <a href="mailto:morettialessiafiorella@gmail.com">morettialessiafiorella@gmail.com</a>. All projects are handled by email.</div>
+<header class="nav"><div class="w">
+<a class="logo" href="#top">Alessia Fiorella Moretti</a>
+<button id="mb" aria-expanded="false" aria-controls="nv">Menu</button>
+<nav id="nv"><a href="#services">Services</a><a href="#method">My method</a><a href="#authors">Featured authors</a><a href="#about">About</a><a href="#faq">Questions</a><a href="#contact">Free audit</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="w">
+<div class="in">
+<p class="kick">Book marketing specialist</p>
+<h1>Books don’t sell themselves. <em>Readers do.</em></h1>
+<p class="lead">I turn finished books into books that readers find, trust and buy. Each campaign starts with one question: who is the reader who will love this book, and where are they already looking?</p>
+<div><div class="cta"><a class="btn" href="#contact">Request your free book marketing audit</a><a class="btn ghost" href="#authors">See featured authors</a></div>
+<p class="mute" style="font-size:.95rem">Prefer to write directly? <a class="mail" style="font-size:1rem" href="mailto:morettialessiafiorella@gmail.com">morettialessiafiorella@gmail.com</a></p></div>
+</div>
+<div class="portrait"><img src="moretti.jpeg" alt="Alessia Fiorella Moretti, book marketing specialist" onerror="this.style.visibility='hidden'"><div class="badge">Book marketing for authors</div></div>
+</div></section>
+
+<div class="trust"><div class="w">
+<div class="rv"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Every request and approval in writing</div>
+<div class="rv"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>No work starts until you approve a written proposal</div>
+<div class="rv"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Plans written for your book, never templates</div>
+<div class="rv"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Honest advice, with no promises of guaranteed sales</div>
+</div></div>
+
+<section id="problem"><div class="w">
+<p class="kick rv">Why good books go unnoticed</p>
+<h2 class="rv">Most authors don’t have a writing problem. They have a positioning problem.</h2>
+<div class="grid">
+<div class="card rv"><h3>The description tells, not sells</h3><p class="mute">It explains the plot but not the experience. A browsing reader needs to know what they will feel and why this book is for them.</p></div>
+<div class="card rv"><h3>The wrong shelves</h3><p class="mute">Wrong categories and keywords put the book where its ideal readers never look.</p></div>
+<div class="card rv"><h3>Mixed signals</h3><p class="mute">The cover promises one genre and the story delivers another, so the right readers scroll past.</p></div>
+<div class="card rv"><h3>Scattered promotion</h3><p class="mute">A few posts, one swap and one ad, with no plan connecting them and no way to see what worked.</p></div>
+<div class="card rv"><h3>Launch week only</h3><p class="mute">The first weeks matter, but the months after decide whether the book keeps selling.</p></div>
+<div class="card rv"><h3>Slow reviews</h3><p class="mute">Without early reviews, new readers hesitate. I plan for them from the start.</p></div>
+</div></div></section>
+
+<section id="services" style="background:#fff"><div class="w">
+<p class="kick rv">Services</p>
+<h2 class="rv">What I do for your book</h2>
+<p class="mute rv">Want to know what a service costs? Send me a message and I’ll reply by email.</p>
+<div class="grid">
+<div class="card rv"><h3>Book launch campaign</h3><small>For a book 8 to 12 weeks from release</small><ul><li>Reader definition and comparable titles</li><li>Positioning, description, tagline and bio</li><li>Category and keyword strategy</li><li>Pre-order and launch-week plan</li><li>Reviewer and media outreach</li><li>Written updates and a post-launch report</li></ul></div>
+<div class="card rv"><h3>Backlist revival</h3><small>For a published book that has stopped selling</small><ul><li>Full audit of cover, title, description and reviews</li><li>Rewritten description and refreshed bio</li><li>Corrected categories and keywords</li><li>Relaunch plan with new outreach angles</li><li>Review-building plan and promotion calendar</li></ul></div>
+<div class="card rv"><h3>Author positioning and brand</h3><small>For authors with a growing catalogue</small><ul><li>Your author promise and ideal reader</li><li>Short, medium and long bios</li><li>Consistent messaging across all platforms</li><li>Series positioning and reading order</li><li>Complete media kit</li></ul></div>
+<div class="card rv"><h3>Publisher and press outreach</h3><small>For authors who want coverage and reviews</small><ul><li>Targets matched to your genre</li><li>Individually written pitches</li><li>Press release and one-page book sheet</li><li>Tracking, follow-up and a full written record</li></ul></div>
+</div></div></section>
+
+<section id="method" class="dark"><div class="w">
+<p class="kick rv">My method</p>
+<h2 class="rv">One method, built around your reader</h2>
+<p class="mute rv" style="max-width:62ch">I don’t sell generic bundles of posts and emails. Every campaign follows the same five steps, so each one supports the next.</p>
+<div class="steps">
+<div class="rv"><b>Define the reader</b>Comparable titles, the promises they make and the words their readers use.</div>
+<div class="rv"><b>Position the book</b>The hook, tone and promise that set your book apart.</div>
+<div class="rv"><b>Fix the retail page</b>Description, categories, keywords, bio, cover fit and sample strategy.</div>
+<div class="rv"><b>Launch and reach out</b>Pre-orders, reviewers, booksellers, media, newsletters and ads.</div>
+<div class="rv"><b>Measure and adjust</b>Written reports on what changed and what to do next.</div>
+</div></div></section>
+
+<section id="how"><div class="w">
+<p class="kick rv">How we work</p>
+<h2 class="rv">Every step happens by email</h2>
+<p class="mute rv">One complete record of your project, with clear accountability on both sides.</p>
+<ol class="list">
+<li class="rv"><b>You request your audit</b>Complete the form with your book’s details.</li>
+<li class="rv"><b>I send your audit</b>It names the issues I found and the changes I recommend.</li>
+<li class="rv"><b>You ask about pricing</b>Message me and I reply with a written proposal covering services, deliverables and timeline. Nothing begins until you approve it in writing.</li>
+<li class="rv"><b>We confirm the details</b>I send a short questionnaire about your book and goals, and you send the files I need.</li>
+<li class="rv"><b>I do the work</b>Each deliverable arrives by email. Approve it or request changes in writing.</li>
+<li class="rv"><b>You get regular updates</b>Written reports on what was done, what happened and what comes next.</li>
+<li class="rv"><b>I deliver a final report</b>A summary of the campaign, the results and my recommendations.</li>
+</ol></div></section>
+
+<section id="authors" style="background:#fff"><div class="w">
+<p class="kick rv">Featured authors</p>
+<h2 class="rv">Authors I have worked with</h2>
+<p class="mute rv">Click an author’s photo, a book cover or the Amazon logo to open the book on Amazon.</p>
+<div class="tg">
+
+<article class="tc rv">
+<a class="ph" data-amz="karen" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="Open Karen Kelsky’s book on Amazon"><img src="Karen%20picture.webp" alt="Karen Kelsky" loading="lazy" onerror="this.style.display='none'"></a>
+<a class="bk" data-amz="karen" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="Open The Professor Is In on Amazon"><img src="Karen%20book.webp" alt="Cover of Karen Kelsky’s book" loading="lazy" onerror="this.style.display='none'"></a>
+<h3>Karen Kelsky</h3><p class="t">The Professor Is In</p>
+<a class="amz" data-amz="karen" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="View on Amazon"><svg viewBox="0 0 120 38" role="img" aria-label="Amazon"><text x="2" y="22" font-family="Arial,sans-serif" font-weight="700" font-size="25" fill="#0E1330">amazon</text><path d="M8 29c28 9 62 9 86-3" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/><path d="M88 22l8 3-4 7" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/></svg></a>
+</article>
+
+<article class="tc rv">
+<a class="ph" data-amz="paul" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="Open Paul J. Silvia’s book on Amazon"><img src="paul%20picture.webp" alt="Paul J. Silvia" loading="lazy" onerror="this.style.display='none'"></a>
+<a class="bk" data-amz="paul" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="Open How to Write a Lot on Amazon"><img src="paul%20book.jpg" alt="Cover of Paul J. Silvia’s book" loading="lazy" onerror="this.style.display='none'"></a>
+<h3>Paul J. Silvia</h3><p class="t">How to Write a Lot</p>
+<a class="amz" data-amz="paul" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="View on Amazon"><svg viewBox="0 0 120 38" role="img" aria-label="Amazon"><text x="2" y="22" font-family="Arial,sans-serif" font-weight="700" font-size="25" fill="#0E1330">amazon</text><path d="M8 29c28 9 62 9 86-3" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/><path d="M88 22l8 3-4 7" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/></svg></a>
+</article>
+
+<article class="tc rv">
+<a class="ph" data-amz="thomas" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="Open Thomas C. Foster’s book on Amazon"><img src="thomas%20picture.webp" alt="Thomas C. Foster" loading="lazy" onerror="this.style.display='none'"></a>
+<a class="bk" data-amz="thomas" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="Open How to Read Literature Like a Professor on Amazon"><img src="thomas%20book.webp" alt="Cover of Thomas C. Foster’s book" loading="lazy" onerror="this.style.display='none'"></a>
+<h3>Thomas C. Foster</h3><p class="t">How to Read Literature Like a Professor</p>
+<a class="amz" data-amz="thomas" href="https://www.amazon.com" target="_blank" rel="noopener" aria-label="View on Amazon"><svg viewBox="0 0 120 38" role="img" aria-label="Amazon"><text x="2" y="22" font-family="Arial,sans-serif" font-weight="700" font-size="25" fill="#0E1330">amazon</text><path d="M8 29c28 9 62 9 86-3" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/><path d="M88 22l8 3-4 7" fill="none" stroke="#FF9900" stroke-width="3.5" stroke-linecap="round"/></svg></a>
+</article>
+
+</div></div></section>
+
+<section id="about" class="about dark"><div class="w">
+<div class="rv"><img src="moretti.jpeg" alt="Alessia Fiorella Moretti" loading="lazy" onerror="this.style.visibility='hidden'"></div>
+<div class="rv">
+<p class="kick">About Alessia</p>
+<h2>A marketer who starts with the reader</h2>
+<p class="mute">I'm Alessia Fiorella Moretti, a book marketing specialist. A Marketer Who Starts With the Reader
+, a book marketing specialist dedicated to helping authors connect their stories with the readers who will value them most. My approach combines audience insight, thoughtful positioning, and strategic promotion to help books stand out in an increasingly competitive publishing landscape. I have a particular interest in romance, fantasy, mystery, and contemporary fiction, with a focus on understanding the unique expectations and reading habits of each audience. From strengthening an author’s brand to developing tailored promotional strategies, I believe effective book marketing begins with understanding both the story and the people it is meant to reach. My mission is to help authors build meaningful visibility, foster lasting reader relationships, and give their books the opportunity to find their rightful audience.</p>
+<p class="mute">My view is simple. A book finds readers when its message is clear, its presentation is right and the people who matter hear about it at the right time. My job is to make all three happen, and to keep you informed in writing at every step.</p>
+<ul class="mute"><li>Clarity: you always know what I’m doing and why.</li><li>Honesty: I tell you what will work and what won’t.</li><li>Your voice stays yours: nothing is used without your approval.</li></ul>
+</div></div></section>
+
+<section id="faq"><div class="w">
+<p class="kick rv">Questions</p>
+<h2 class="rv">Before you write to me</h2>
+<details class="rv"><summary>How do we communicate?</summary><p>Only by email. Every request, approval and update is in writing, so both of us have a clear record.</p></details>
+<details class="rv"><summary>How much do your services cost?</summary><p>Pricing depends on your book and the services you need. Send me a message by email and I’ll reply with the details.</p></details>
+<details class="rv"><summary>Is the audit a commitment?</summary><p>No. You can use the audit on its own, with no obligation to continue.</p></details>
+<details class="rv"><summary>When does work begin?</summary><p>Only after you approve my written proposal by email.</p></details>
+<details class="rv"><summary>Do you guarantee sales?</summary><p>No honest marketer can. I guarantee thorough, well-documented work built on a clear understanding of your reader.</p></details>
+<details class="rv"><summary>Do I keep control of my book and brand?</summary><p>Yes. Everything I write is sent to you for approval before it is used.</p></details>
+</div></section>
+
+<section id="contact" class="contact dark"><div class="w">
+<div class="rv">
+<p class="kick">Free book marketing audit</p>
+<h2>Your book deserves a plan, not guesswork.</h2>
+<p class="mute">Tell me about your book. Your message goes straight to my inbox, and I’ll reply by email with a written audit covering your positioning, description, categories, keywords and author page, plus three priority actions.</p>
+<div class="cp"><img src="moretti.jpeg" alt="Alessia Fiorella Moretti" loading="lazy" onerror="this.style.display='none'"><div><b>Alessia Fiorella Moretti</b><br><a class="mail" href="mailto:morettialessiafiorella@gmail.com">morettialessiafiorella@gmail.com</a></div></div>
+<p class="mute">Questions about pricing? Write to the address above or use this form.</p>
+</div>
+<form id="f" class="rv" action="https://formspree.io/f/xaeewlpq" method="POST">
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Your email<input name="email" type="email" required autocomplete="email"></label>
+<label>Book title<input name="book_title" required></label>
+<label>Genre<input name="genre"></label>
+<label>Link to your book page (if published)<input name="book_link" type="url" placeholder="https://"></label>
+<label>Where are you in the process?<select name="stage"><option>Still writing</option><option>Launching in the next 3 months</option><option>Published and selling slowly</option><option>Published and want to relaunch</option></select></label>
+<label>What do you want this book to achieve?<textarea name="goal" rows="3"></textarea></label>
+<label>What is the biggest obstacle right now?<textarea name="obstacle" rows="3"></textarea></label>
+<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="_subject" value="New author enquiry from your website">
+<button class="btn" id="sb" type="submit">Request my audit</button>
+<p id="msg" role="status"></p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="w">
+<div><h4>Alessia Fiorella Moretti</h4><p>Book marketing specialist. Helping authors reach the readers who will love their books.</p><a class="mail" href="mailto:morettialessiafiorella@gmail.com">morettialessiafiorella@gmail.com</a></div>
+<div><h4>Explore</h4><a href="#services">Services</a><a href="#method">My method</a><a href="#authors">Featured authors</a><a href="#faq">Questions</a></div>
+<div><h4>Work with me</h4><a href="#contact">Free audit</a><a href="mailto:morettialessiafiorella@gmail.com">Pricing enquiries</a><p style="margin-top:10px">All projects and conversations are handled by email.</p></div>
+</div><div class="w copy">© <span id="yr">2026</span> Alessia Fiorella Moretti. All rights reserved.</div></footer>
+
+<script>
+(function(){
+/* Replace these with each book's exact Amazon page link */
+var AMAZON={
+ karen:"https://www.amazon.com/s?k=The+Professor+Is+In+Karen+Kelsky",
+ paul:"https://www.amazon.com/s?k=How+to+Write+a+Lot+Paul+Silvia",
+ thomas:"https://www.amazon.com/s?k=How+to+Read+Literature+Like+a+Professor+Thomas+Foster"
+};
+document.querySelectorAll("[data-amz]").forEach(function(a){var u=AMAZON[a.dataset.amz];if(u)a.href=u});
+document.getElementById("yr").textContent=new Date().getFullYear();
+var bar=document.getElementById("bar");
+function prog(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+"%"}
+addEventListener("scroll",prog,{passive:true});prog();
+var mb=document.getElementById("mb"),nv=document.getElementById("nv");
+mb.addEventListener("click",function(){var o=nv.classList.toggle("open");mb.setAttribute("aria-expanded",o)});
+nv.addEventListener("click",function(e){if(e.target.tagName==="A"){nv.classList.remove("open");mb.setAttribute("aria-expanded","false")}});
+var els=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}})},{threshold:.12});
+ els.forEach(function(e,i){e.style.transitionDelay=(i%3)*90+"ms";io.observe(e)});
+}else{els.forEach(function(e){e.classList.add("on")})}
+document.querySelectorAll(".bk").forEach(function(b){
+ var im=b.firstElementChild;
+ b.addEventListener("mousemove",function(e){var r=b.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;im.style.transform="rotateY("+x*22+"deg) rotateX("+-y*22+"deg) scale(1.05)"});
+ b.addEventListener("mouseleave",function(){im.style.transform=""});
+});
+var f=document.getElementById("f"),msg=document.getElementById("msg"),sb=document.getElementById("sb");
+f.addEventListener("submit",function(e){
+ e.preventDefault();sb.disabled=true;msg.className="";msg.textContent="Sending…";
+ fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}}).then(function(r){
+  if(!r.ok)throw new Error("fail");
+  f.reset();msg.className="ok";msg.textContent="Thank you. Your request is in my inbox. I will reply by email.";
+ }).catch(function(){
+  msg.className="err";msg.textContent="Sorry, that did not send. Please email me directly at morettialessiafiorella@gmail.com.";
+ }).then(function(){sb.disabled=false});
+});
+})();
+</script>
+</body>
+</html>
